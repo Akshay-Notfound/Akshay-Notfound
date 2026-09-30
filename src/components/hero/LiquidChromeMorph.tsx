@@ -23,7 +23,11 @@ const vertexShader = /* glsl */ `
 // ─── Fragment Shader ──────────────────────────────────────────────────────────
 // Full raymarched SDF with 4 morph states and liquid-chrome shading
 const fragmentShader = /* glsl */ `
-  precision highp float;
+  #ifdef GL_FRAGMENT_PRECISION_HIGH
+    precision highp float;
+  #else
+    precision mediump float;
+  #endif
 
   // ── Uniforms ────────────────────────────────────────────────────────────────
   uniform float uTime;

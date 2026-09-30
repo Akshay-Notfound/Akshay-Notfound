@@ -37,14 +37,19 @@ export default function SmoothScrollProvider({
       return;
     }
 
+    // Skip Lenis on touch/mobile devices — native momentum scrolling runs at 120Hz with zero lag
+    const isTouch = window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 768;
+    if (isTouch) {
+      return;
+    }
+
     const lenisInstance = new Lenis({
-      duration: 1.2,
+      duration: 1.1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
       wheelMultiplier: 0.9,
-      touchMultiplier: 1.5,
     });
 
     setLenis(lenisInstance);

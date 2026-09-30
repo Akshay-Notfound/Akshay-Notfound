@@ -107,16 +107,23 @@ export default function Hero3DCanvas() {
     const heroEl = document.getElementById("hero-section");
     if (heroEl) observer.observe(heroEl);
 
-    // Scroll → morphT
+    // Scroll → morphT (throttled with RAF to prevent forced reflows)
+    let scrollTicking = false;
     const onScroll = () => {
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (totalHeight <= 0) return;
-      const progress = Math.min(window.scrollY / totalHeight, 1);
-      const newMorphT = scrollToMorphT(progress);
-      if (Math.abs(newMorphT - morphTRef.current) > 0.005) {
-        morphTRef.current = newMorphT;
-        setMorphT(newMorphT);
-      }
+      if (scrollTicking) return;
+      scrollTicking = true;
+      requestAnimationFrame(() => {
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (totalHeight > 0) {
+          const progress = Math.min(window.scrollY / totalHeight, 1);
+          const newMorphT = scrollToMorphT(progress);
+          if (Math.abs(newMorphT - morphTRef.current) > 0.01) {
+            morphTRef.current = newMorphT;
+            setMorphT(newMorphT);
+          }
+        }
+        scrollTicking = false;
+      });
     };
     window.addEventListener("scroll", onScroll, { passive: true });
 

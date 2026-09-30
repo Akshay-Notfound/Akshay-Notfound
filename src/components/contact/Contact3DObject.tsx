@@ -58,13 +58,28 @@ function FloatingPolyhedron() {
 
 export default function Contact3DObject() {
   const { reducedMotion } = useSmoothScroll();
+  const [isInView, setIsInView] = React.useState(false);
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { threshold: 0.05 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className="w-full h-[220px] relative">
+    <div ref={containerRef} className="w-full h-[220px] relative">
       <Canvas
         camera={{ position: [0, 0, 3.2], fov: 45 }}
-        dpr={[1, 1.5]}
-        gl={{ antialias: true, alpha: true }}
+        dpr={[1, 1.25]}
+        gl={{ antialias: false, alpha: true, powerPreference: "low-power" }}
+        frameloop={isInView && !reducedMotion ? "always" : "demand"}
       >
         <ambientLight intensity={0.6} />
         <pointLight position={[3, 3, 3]} intensity={3} color="#22d3ee" />

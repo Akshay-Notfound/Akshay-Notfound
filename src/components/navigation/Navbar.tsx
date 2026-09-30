@@ -11,33 +11,37 @@ export default function Navbar() {
   const { tier, setTier, isMuted, toggleMute } = useCinematic();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollYRef = React.useRef(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showTierDropdown, setShowTierDropdown] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          const scrolled = currentScrollY > 40;
+          setIsScrolled((prev) => (prev !== scrolled ? scrolled : prev));
 
-      if (currentScrollY > 40) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+          const prevY = lastScrollYRef.current;
+          if (currentScrollY > prevY && currentScrollY > 150) {
+            setIsVisible((prev) => (prev !== false ? false : prev));
+          } else {
+            setIsVisible((prev) => (prev !== true ? true : prev));
+          }
+
+          lastScrollYRef.current = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
       }
-
-      // Hide navbar when scrolling down fast, reveal when scrolling up
-      if (currentScrollY > lastScrollY && currentScrollY > 150) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
-
-      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   const navLinks = [
     { name: "About", href: "#about" },

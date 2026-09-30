@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { sfx } from "@/utils/audio";
 import { Volume2, VolumeX, Sliders, Eye, Film } from "lucide-react";
 import { useCinematic } from "@/components/providers/CinematicProvider";
@@ -17,12 +17,15 @@ export default function GameHUD() {
     setIsIntroActive,
     setLetterboxOpen,
   } = useCinematic();
-  const [fps, setFps] = useState(120);
   const [activeScene, setActiveScene] = useState("SCENE 01 // THE ARCHITECT");
   const [showTierMenu, setShowTierMenu] = useState(false);
+  const activeSceneRef = useRef("SCENE 01 // THE ARCHITECT");
+  const fpsSpanRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    // Live FPS estimation
+    const isTouch = window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 768;
+
+    // Live FPS estimation via direct DOM update (zero React re-renders)
     let lastTime = performance.now();
     let frames = 0;
     let animId: number;
@@ -30,38 +33,49 @@ export default function GameHUD() {
     const calculateFps = (time: number) => {
       frames++;
       if (time - lastTime >= 1000) {
-        setFps(Math.round((frames * 1000) / (time - lastTime)));
+        if (fpsSpanRef.current) {
+          fpsSpanRef.current.textContent = `${Math.round((frames * 1000) / (time - lastTime))} FPS`;
+        }
         frames = 0;
         lastTime = time;
       }
       animId = requestAnimationFrame(calculateFps);
     };
 
-    animId = requestAnimationFrame(calculateFps);
+    if (!isTouch && !reducedMotion) {
+      animId = requestAnimationFrame(calculateFps);
+    }
 
-    // Track active scroll sector as Film Scenes
-    const handleScroll = () => {
-      const scrollPos = window.scrollY + 350;
-      const scenes = [
-        { id: "hero-section", label: "SCENE 01 // THE ARCHITECT" },
-        { id: "about", label: "SCENE 02 // THE ENGINEER" },
-        { id: "skills", label: "SCENE 03 // THE MATRIX" },
-        { id: "projects", label: "SCENE 04 // THE BLUEPRINTS" },
-        { id: "experience", label: "SCENE 05 // THE CHRONICLES" },
-        { id: "certifications", label: "SCENE 06 // THE CREDENTIALS" },
-        { id: "contact", label: "SCENE 07 // THE TRANSMISSION" },
-      ];
+    // Scene tracking via IntersectionObserver — runs 100% off the main thread with 0 scroll lag
+    const scenes = [
+      { id: "hero-section", label: "SCENE 01 // THE ARCHITECT" },
+      { id: "about", label: "SCENE 02 // THE ENGINEER" },
+      { id: "skills", label: "SCENE 03 // THE MATRIX" },
+      { id: "projects", label: "SCENE 04 // THE BLUEPRINTS" },
+      { id: "experience", label: "SCENE 05 // THE CHRONICLES" },
+      { id: "certifications", label: "SCENE 06 // THE CREDENTIALS" },
+      { id: "contact", label: "SCENE 07 // THE TRANSMISSION" },
+    ];
 
-      for (let i = scenes.length - 1; i >= 0; i--) {
-        const el = document.getElementById(scenes[i].id);
-        if (el && el.offsetTop <= scrollPos) {
-          setActiveScene(scenes[i].label);
-          break;
-        }
-      }
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const found = scenes.find((s) => s.id === entry.target.id);
+            if (found && activeSceneRef.current !== found.label) {
+              activeSceneRef.current = found.label;
+              setActiveScene(found.label);
+            }
+          }
+        });
+      },
+      { rootMargin: "-20% 0px -40% 0px", threshold: 0.1 }
+    );
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    scenes.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
 
     // Keyboard fast-travel hotkeys (1-7) & sound toggle [M]
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -90,7 +104,7 @@ export default function GameHUD() {
 
     window.addEventListener("keydown", handleKeyDown);
 
-    // Sound effect on click & hover globally
+    // Sound effect on click & hover (desktop only)
     const handleGlobalClick = () => sfx.select();
     const handleGlobalHover = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;
@@ -100,30 +114,34 @@ export default function GameHUD() {
     };
 
     document.addEventListener("click", handleGlobalClick);
-    document.addEventListener("mouseover", handleGlobalHover);
+    if (!isTouch) {
+      document.addEventListener("mouseover", handleGlobalHover);
+    }
 
     return () => {
-      cancelAnimationFrame(animId);
-      window.removeEventListener("scroll", handleScroll);
+      if (animId) cancelAnimationFrame(animId);
+      observer.disconnect();
       window.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("click", handleGlobalClick);
-      document.removeEventListener("mouseover", handleGlobalHover);
+      if (!isTouch) {
+        document.removeEventListener("mouseover", handleGlobalHover);
+      }
     };
-  }, [toggleMute]);
+  }, [toggleMute, reducedMotion]);
 
   return (
     <div
       className="fixed inset-0 pointer-events-none z-30 select-none overflow-hidden transition-opacity duration-500"
       style={{ opacity: config.hud.opacity }}
     >
-      {/* Cinematic Viewfinder Corner Frame Marks */}
+      {/* Cinematic Viewfinder Corner Frame Marks (desktop only) */}
       {config.hud.showCornerReticles && !reducedMotion && (
-        <>
+        <div className="hidden sm:block">
           <div className="absolute top-5 left-5 w-8 h-8 border-t border-l border-cyan/40 pointer-events-none" />
           <div className="absolute top-5 right-5 w-8 h-8 border-t border-r border-cyan/40 pointer-events-none" />
           <div className="absolute bottom-5 left-5 w-8 h-8 border-b border-l border-cyan/40 pointer-events-none" />
           <div className="absolute bottom-5 right-5 w-8 h-8 border-b border-r border-cyan/40 pointer-events-none" />
-        </>
+        </div>
       )}
 
       {/* Top Left: Scene Viewfinder Identifier */}
@@ -134,7 +152,7 @@ export default function GameHUD() {
             {activeScene}
           </span>
           <span className="text-muted">|</span>
-          <span className="text-cyan font-mono">{fps} FPS</span>
+          <span ref={fpsSpanRef} className="text-cyan font-mono">60 FPS</span>
         </div>
       </div>
 
