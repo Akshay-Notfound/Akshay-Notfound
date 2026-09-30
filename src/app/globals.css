@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #080b14;
+  --foreground: #f8fafc;
+  --deep-navy: #10182b;
+  --electric-blue: #3b82f6;
+  --violet: #8b5cf6;
+  --cyan: #22d3ee;
+  --muted: #94a3b8;
+  --glass: #1e293b;
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-surface: rgba(16, 24, 43, 0.7);
+  --glass-highlight: rgba(255, 255, 255, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  background-color: #080b14;
+}
+
+body {
+  background-color: #080b14;
+  color: #f8fafc;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  selection-background-color: #3b82f6;
+  selection-color: #ffffff;
+}
+
+::selection {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080b14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--glass-surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  position: relative;
+}
+
+.glass-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 60%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.glass-card {
+  background: rgba(16, 24, 43, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 14px 40px -10px rgba(59, 130, 246, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Gradient Text */
+.text-gradient-cyan-blue {
+  background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 50%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-white {
+  background: linear-gradient(180deg, #ffffff 30%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hacker & Robotic Cyber Styles */
+.font-robotic {
+  font-family: var(--font-orbitron), monospace;
+  letter-spacing: 0.05em;
+}
+
+.font-hacker {
+  font-family: var(--font-hacker-mono), var(--font-jetbrains-mono), monospace;
+  letter-spacing: 0.06em;
+}
+
+.cyber-glitch-text {
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.6), 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.hacker-terminal-text {
+  color: #22d3ee;
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.5);
+  font-family: var(--font-hacker-mono), monospace;
+}
+
+.cyber-bracket {
+  color: #38bdf8;
+  opacity: 0.7;
+  font-family: var(--font-orbitron), monospace;
+}
+
+/* Ambient Radial Glows */
+.bg-ambient-grid {
+  background-image: radial-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Cinematic Atmospheric Lighting (Noisy grain removed for crystal-clear 4K video feel) */
+.cinematic-atmosphere {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(circle at 50% 20%, rgba(34, 211, 238, 0.04) 0%, transparent 60%),
+              radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.04) 0%, transparent 60%),
+              radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 50%);
+}
+
+/* Cyber Scanline effect across page */
+.cyber-scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.25)
+  );
+  background-size: 100% 4px;
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
