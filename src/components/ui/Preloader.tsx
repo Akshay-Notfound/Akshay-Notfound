@@ -11,7 +11,12 @@ export default function Preloader() {
 
   useEffect(() => {
     // If reduced motion or already shown in this session, skip immediately
-    if (reducedMotion || sessionStorage.getItem("ar_preloader_seen")) {
+    try {
+      if (reducedMotion || (typeof window !== "undefined" && window.sessionStorage && sessionStorage.getItem("ar_preloader_seen"))) {
+        setLoading(false);
+        return;
+      }
+    } catch {
       setLoading(false);
       return;
     }
@@ -22,7 +27,7 @@ export default function Preloader() {
           clearInterval(interval);
           setTimeout(() => {
             setLoading(false);
-            sessionStorage.setItem("ar_preloader_seen", "true");
+            try { sessionStorage.setItem("ar_preloader_seen", "true"); } catch {}
           }, 300);
           return 100;
         }
@@ -36,7 +41,7 @@ export default function Preloader() {
 
   const handleSkip = () => {
     setLoading(false);
-    sessionStorage.setItem("ar_preloader_seen", "true");
+    try { sessionStorage.setItem("ar_preloader_seen", "true"); } catch {}
   };
 
   return (

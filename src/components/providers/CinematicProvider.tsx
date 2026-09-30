@@ -76,10 +76,14 @@ export default function CinematicProvider({
     }
 
     // 3. Check stored tier preference
-    const savedTier = localStorage.getItem("ar_quality_tier") as QualityTier | null;
-    if (savedTier && ["cinematic", "balanced", "performance"].includes(savedTier)) {
-      setTierState(savedTier);
-      return;
+    try {
+      const savedTier = localStorage.getItem("ar_quality_tier") as QualityTier | null;
+      if (savedTier && ["cinematic", "balanced", "performance"].includes(savedTier)) {
+        setTierState(savedTier);
+        return;
+      }
+    } catch {
+      // Ignore security errors in restricted/incognito environments
     }
 
     // 4. Hardware heuristics auto-detection

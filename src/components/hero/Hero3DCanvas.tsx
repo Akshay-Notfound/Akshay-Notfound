@@ -56,6 +56,23 @@ function NoWebGLFallback() {
   );
 }
 
+class CanvasErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  componentDidCatch(error: unknown) {
+    console.warn("Hero3DCanvas recovered from WebGL render error:", error);
+  }
+  render() {
+    if (this.state.hasError) return <NoWebGLFallback />;
+    return this.props.children;
+  }
+}
+
 // ── Main Canvas ───────────────────────────────────────────────────────────────
 export default function Hero3DCanvas() {
   const { reducedMotion } = useSmoothScroll();
@@ -73,7 +90,7 @@ export default function Hero3DCanvas() {
     setMounted(true);
     const mobile = window.innerWidth < 768;
     setIsMobile(mobile);
-    if (mobile) setTier("balanced");
+    if (mobile) setTier("performance");
 
     // WebGL check
     try {
@@ -117,53 +134,55 @@ export default function Hero3DCanvas() {
   const useFallback = cfg.useFallback || reducedMotion;
 
   return (
-    <div className="w-full h-full min-h-[350px] sm:min-h-[450px] lg:min-h-[550px] relative bg-transparent">
-      <Canvas
-        camera={{ position: [0, 0, 4.8], fov: config.camera.fov }}
-        dpr={dprRange}
-        gl={{
-          antialias: true,
-          alpha: true,
-          powerPreference: "high-performance",
-          toneMapping: 4, // ACESFilmic
-          toneMappingExposure: 1.1,
-        }}
-        onCreated={({ gl }) => {
-          gl.setClearColor(0x000000, 0);
-        }}
-        style={{ background: "transparent" }}
-        frameloop={isInView && !reducedMotion ? "always" : "demand"}
-      >
-        {/* Auto-degrade quality tier on low FPS (gradual) */}
-        <PerformanceMonitor
-          iterations={8}
-          flipflops={4}
-          threshold={0.65}
-          onDecline={() => setTier(prev => prev === "cinematic" ? "balanced" : "performance")}
-        />
+    <CanvasErrorBoundary>
+      <div className="w-full h-full min-h-[350px] sm:min-h-[450px] lg:min-h-[550px] relative bg-transparent">
+        <Canvas
+          camera={{ position: [0, 0, 4.8], fov: config.camera.fov }}
+          dpr={dprRange}
+          gl={{
+            antialias: true,
+            alpha: true,
+            powerPreference: "high-performance",
+            toneMapping: 4, // ACESFilmic
+            toneMappingExposure: 1.1,
+          }}
+          onCreated={({ gl }) => {
+            gl.setClearColor(0x000000, 0);
+          }}
+          style={{ background: "transparent" }}
+          frameloop={isInView && !reducedMotion ? "always" : "demand"}
+        >
+          {/* Auto-degrade quality tier on low FPS (gradual) */}
+          <PerformanceMonitor
+            iterations={8}
+            flipflops={4}
+            threshold={0.65}
+            onDecline={() => setTier(prev => prev === "cinematic" ? "balanced" : "performance")}
+          />
 
-        <Suspense fallback={null}>
-          <CinematicCameraRig reducedMotion={reducedMotion} />
+          <Suspense fallback={null}>
+            <CinematicCameraRig reducedMotion={reducedMotion} />
 
-          {useFallback ? (
-            <LiquidFallback morphT={morphT} tier={tier} reducedMotion={reducedMotion} />
-          ) : (
-            <LiquidChromeMorph morphT={morphT} tier={tier} reducedMotion={reducedMotion} />
-          )}
-        </Suspense>
-      </Canvas>
+            {useFallback ? (
+              <LiquidFallback morphT={morphT} tier={tier} reducedMotion={reducedMotion} />
+            ) : (
+              <LiquidChromeMorph morphT={morphT} tier={tier} reducedMotion={reducedMotion} />
+            )}
+          </Suspense>
+        </Canvas>
 
-      {/* Morph state label HUD (very subtle, bottom-left) */}
-      {!reducedMotion && (
-        <div className="absolute bottom-3 left-3 pointer-events-none">
-          <div className="text-[9px] font-mono tracking-widest uppercase opacity-30 text-cyan">
-            {morphT < 1 ? "STATE_00 // RAW"
-             : morphT < 2 ? "STATE_01 // CLEAN"
-             : morphT < 3 ? "STATE_02 // PIPELINE"
-             : "STATE_03 // INTELLIGENCE"}
+        {/* Morph state label HUD (very subtle, bottom-left) */}
+        {!reducedMotion && (
+          <div className="absolute bottom-3 left-3 pointer-events-none">
+            <div className="text-[9px] font-mono tracking-widest uppercase opacity-30 text-cyan">
+              {morphT < 1 ? "STATE_00 // RAW"
+               : morphT < 2 ? "STATE_01 // CLEAN"
+               : morphT < 3 ? "STATE_02 // PIPELINE"
+               : "STATE_03 // INTELLIGENCE"}
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </CanvasErrorBoundary>
   );
 }
