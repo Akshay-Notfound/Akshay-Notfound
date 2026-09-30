@@ -59,20 +59,25 @@ export default function CinematicProvider({
       return;
     }
 
-    // 2. Check if intro was already shown this session (skip on refresh)
-    try {
-      const alreadySeen = sessionStorage.getItem("ar_cinema_intro_seen");
-      if (alreadySeen === "true") {
+    // 2. Check if mobile or intro was already shown this session
+    const isMobile = window.innerWidth < 768 || window.matchMedia("(pointer: coarse)").matches;
+    if (isMobile) {
+      setIsIntroActive(false);
+      setLetterboxOpen(false);
+    } else {
+      try {
+        const alreadySeen = sessionStorage.getItem("ar_cinema_intro_seen");
+        if (alreadySeen === "true") {
+          setIsIntroActive(false);
+          setLetterboxOpen(false);
+        } else {
+          setIsIntroActive(true);
+          setLetterboxOpen(true);
+        }
+      } catch {
         setIsIntroActive(false);
         setLetterboxOpen(false);
-        // Still resolve tier below
-      } else {
-        setIsIntroActive(true);
-        setLetterboxOpen(true);
       }
-    } catch {
-      setIsIntroActive(true);
-      setLetterboxOpen(true);
     }
 
     // 3. Check stored tier preference

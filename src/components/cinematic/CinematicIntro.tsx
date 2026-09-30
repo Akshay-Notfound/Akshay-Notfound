@@ -34,12 +34,12 @@ export default function CinematicIntro() {
     setExiting(true);
     sfx.playWhoosh();
 
-    // Exit after outro animation finishes (1.4s)
+    // Fast exit after 450ms
     const id = setTimeout(() => {
       setIsIntroActive(false);
       setLetterboxOpen(false);
       try { sessionStorage.setItem("ar_cinema_intro_seen", "true"); } catch { /* noop */ }
-    }, 1400);
+    }, 450);
     timersRef.current.push(id);
   }, [exiting, setIsIntroActive, setLetterboxOpen]);
 
@@ -52,30 +52,31 @@ export default function CinematicIntro() {
     setMounted(true);
     setLetterboxOpen(true);
 
-    // ── Phase timeline ──────────────────────────────────────────────────
-    // 0ms   → Absolute black (mount)
-    // 200ms → Letterbox bars slide in (Phase 1)
-    // 800ms → Anamorphic streak ignites (Phase 2)
-    // 1600ms→ Name reveals letter by letter (Phase 3)
-    // 2800ms→ Subtitle & badge fade in (Phase 4)
-    // 4000ms→ "Enter" prompt pulses in (Phase 5)
-    // 5800ms→ Auto-exit if not clicked
-    addTimer(() => { setPhase(1); }, 200);
-    addTimer(() => { setPhase(2); sfx.playRiser(1.8); }, 800);
-    addTimer(() => { setPhase(3); sfx.playImpact(); }, 1600);
-    addTimer(() => { setPhase(4); }, 2800);
-    addTimer(() => { setPhase(5); }, 4000);
-    addTimer(() => { completeIntro(); }, 5800);
+    // ── Snappy Cinematic Timeline (2.2s total) ──────────────────────────
+    addTimer(() => { setPhase(1); }, 100);
+    addTimer(() => { setPhase(2); sfx.playRiser(1.0); }, 350);
+    addTimer(() => { setPhase(3); sfx.playImpact(); }, 750);
+    addTimer(() => { setPhase(4); }, 1300);
+    addTimer(() => { setPhase(5); }, 1800);
+    addTimer(() => { completeIntro(); }, 2400);
 
     const onKey = (e: KeyboardEvent) => {
       if (["Escape", " ", "Enter"].includes(e.key)) completeIntro();
     };
+    const onInteract = () => completeIntro();
+
     window.addEventListener("keydown", onKey);
+    window.addEventListener("click", onInteract);
+    window.addEventListener("wheel", onInteract, { passive: true });
+    window.addEventListener("touchstart", onInteract, { passive: true });
 
     return () => {
       timersRef.current.forEach(clearTimeout);
       timersRef.current = [];
       window.removeEventListener("keydown", onKey);
+      window.removeEventListener("click", onInteract);
+      window.removeEventListener("wheel", onInteract);
+      window.removeEventListener("touchstart", onInteract);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reducedMotion, tier]);
@@ -90,9 +91,20 @@ export default function CinematicIntro() {
           className="fixed inset-0 z-[9999] flex flex-col select-none overflow-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 1.4, ease: FILM_EASE } }}
+          exit={{ opacity: 0, transition: { duration: 0.45, ease: FILM_EASE } }}
           style={{ background: "#030509" }}
         >
+          {/* Quick Skip Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              completeIntro();
+            }}
+            className="absolute top-5 right-5 z-40 px-3.5 py-1.5 rounded-full border border-cyan/40 bg-deep-navy/90 text-[10px] font-mono tracking-widest text-cyan uppercase hover:bg-cyan/20 transition-all flex items-center gap-1.5 cursor-pointer pointer-events-auto shadow-[0_0_15px_rgba(34,211,238,0.25)]"
+          >
+            <span>SKIP INTRO</span>
+            <span className="opacity-60">[ESC]</span>
+          </button>
           {/* ── Background volumetric light ──────────────────────────── */}
           <motion.div
             className="absolute inset-0 pointer-events-none"

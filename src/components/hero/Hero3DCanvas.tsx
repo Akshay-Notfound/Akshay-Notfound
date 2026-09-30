@@ -2,23 +2,13 @@
 
 import React, { useState, useEffect, useRef, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { PerformanceMonitor } from "@react-three/drei";
 import { useSmoothScroll } from "@/components/providers/SmoothScrollProvider";
 import { useCinematic } from "@/components/providers/CinematicProvider";
-import { LIQUID_PRESETS, MORPH_SCROLL_MAP } from "@/config/liquid";
+import { MORPH_SCROLL_MAP } from "@/config/liquid";
 import type { LiquidTier } from "@/config/liquid";
-import dynamic from "next/dynamic";
 import CinematicCameraRig from "@/components/cinematic/CinematicCameraRig";
 
-// Lazy-load heavy shader component
-const LiquidChromeMorph = dynamic(
-  () => import("./LiquidChromeMorph"),
-  { ssr: false, loading: () => null }
-);
-const LiquidFallback = dynamic(
-  () => import("./LiquidFallback"),
-  { ssr: false, loading: () => null }
-);
+import LiquidFluidChrome from "./LiquidFallback";
 
 // ── Scroll → morph mapping ────────────────────────────────────────────────────
 function scrollToMorphT(scrollProgress: number): number {
@@ -137,8 +127,6 @@ export default function Hero3DCanvas() {
   if (!hasWebGL) return <NoWebGLFallback />;
 
   const dprRange: [number, number] = isMobile ? [1, 1.25] : [1, 1.75];
-  const cfg = LIQUID_PRESETS[tier];
-  const useFallback = cfg.useFallback || reducedMotion;
 
   return (
     <CanvasErrorBoundary>
@@ -159,22 +147,9 @@ export default function Hero3DCanvas() {
           style={{ background: "transparent" }}
           frameloop={isInView && !reducedMotion ? "always" : "demand"}
         >
-          {/* Auto-degrade quality tier on low FPS (gradual) */}
-          <PerformanceMonitor
-            iterations={8}
-            flipflops={4}
-            threshold={0.65}
-            onDecline={() => setTier(prev => prev === "cinematic" ? "balanced" : "performance")}
-          />
-
           <Suspense fallback={null}>
             <CinematicCameraRig reducedMotion={reducedMotion} />
-
-            {useFallback ? (
-              <LiquidFallback morphT={morphT} tier={tier} reducedMotion={reducedMotion} />
-            ) : (
-              <LiquidChromeMorph morphT={morphT} tier={tier} reducedMotion={reducedMotion} />
-            )}
+            <LiquidFluidChrome morphT={morphT} tier={tier} reducedMotion={reducedMotion} />
           </Suspense>
         </Canvas>
 
