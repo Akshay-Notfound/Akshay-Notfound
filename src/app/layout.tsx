@@ -10,6 +10,7 @@ import CustomCursor from "@/components/ui/CustomCursor";
 import GameHUD from "@/components/game/GameHUD";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/navigation/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -144,6 +145,7 @@ export default function RootLayout({
             <Footer />
           </SmoothScrollProvider>
         </CinematicProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
