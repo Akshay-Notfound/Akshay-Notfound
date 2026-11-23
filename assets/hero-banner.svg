@@ -1,0 +1,157 @@
+<svg width="900" height="220" viewBox="0 0 900 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#080d1a"/>
+    </linearGradient>
+
+    <!-- Neon Text Gradient -->
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+
+    <linearGradient id="laserGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="subGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="50%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="laserGlow">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Cyber Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.4)); }
+      50% { opacity: 1; filter: drop-shadow(0 0 18px rgba(34, 211, 238, 0.9)); }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(0); opacity: 0.1; }
+      50% { opacity: 0.8; }
+      100% { transform: translateY(220px); opacity: 0.1; }
+    }
+    @keyframes circuitFlow {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes nodeBlink {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    .title-text {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      letter-spacing: 6px;
+      animation: pulseGlow 4s infinite ease-in-out;
+    }
+    .sub-text {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-weight: 600;
+      letter-spacing: 4px;
+    }
+    .laser-line {
+      animation: scanline 5s infinite linear;
+    }
+    .circuit-path {
+      stroke-dasharray: 60, 40;
+      animation: circuitFlow 12s infinite linear;
+    }
+    .node-1 { animation: nodeBlink 2s infinite ease-in-out; }
+    .node-2 { animation: nodeBlink 3s infinite ease-in-out 1s; }
+  </style>
+
+  <!-- Base Dark Canvas -->
+  <rect width="900" height="220" rx="14" fill="url(#bgGradient)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Cyber Grid -->
+  <rect width="900" height="220" rx="14" fill="url(#cyberGrid)"/>
+
+  <!-- Ambient Glowing Blobs -->
+  <circle cx="200" cy="110" r="140" fill="#0ea5e9" opacity="0.08" filter="url(#glow)"/>
+  <circle cx="700" cy="110" r="140" fill="#6366f1" opacity="0.08" filter="url(#glow)"/>
+  <circle cx="450" cy="90" r="90" fill="#22d3ee" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Circuit Decorative Lines -->
+  <!-- Left Side Circuit -->
+  <path d="M 30 110 L 90 110 L 120 70 L 220 70" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.5" class="circuit-path"/>
+  <circle cx="220" cy="70" r="3" fill="#22d3ee" class="node-1"/>
+  <path d="M 50 160 L 110 160 L 140 190 L 200 190" fill="none" stroke="#6366f1" stroke-width="1.2" opacity="0.4"/>
+  <circle cx="200" cy="190" r="3" fill="#6366f1" class="node-2"/>
+
+  <!-- Right Side Circuit -->
+  <path d="M 870 110 L 810 110 L 780 70 L 680 70" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.5" class="circuit-path"/>
+  <circle cx="680" cy="70" r="3" fill="#22d3ee" class="node-1"/>
+  <path d="M 850 160 L 790 160 L 760 190 L 700 190" fill="none" stroke="#6366f1" stroke-width="1.2" opacity="0.4"/>
+  <circle cx="700" cy="190" r="3" fill="#6366f1" class="node-2"/>
+
+  <!-- Top & Bottom Glowing Borders -->
+  <line x1="150" y1="1" x2="750" y2="1" stroke="url(#laserGrad)" stroke-width="2.5" filter="url(#laserGlow)"/>
+  <line x1="200" y1="219" x2="700" y2="219" stroke="url(#laserGrad)" stroke-width="2" filter="url(#laserGlow)"/>
+
+  <!-- Scanning Laser Line -->
+  <line x1="40" y1="0" x2="860" y2="0" stroke="url(#laserGrad)" stroke-width="1.5" class="laser-line"/>
+
+  <!-- Cyber Corner Reticles -->
+  <!-- Top Left -->
+  <path d="M 16 32 L 16 16 L 32 16" fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.8"/>
+  <!-- Top Right -->
+  <path d="M 884 32 L 884 16 L 868 16" fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.8"/>
+  <!-- Bottom Left -->
+  <path d="M 16 188 L 16 204 L 32 204" fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.8"/>
+  <!-- Bottom Right -->
+  <path d="M 884 188 L 884 204 L 868 204" fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.8"/>
+
+  <!-- Top Telemetry Tag -->
+  <g transform="translate(450, 42)">
+    <rect x="-120" y="-12" width="240" height="22" rx="4" fill="#0d1726" stroke="#22d3ee" stroke-width="0.8" opacity="0.8"/>
+    <circle cx="-100" cy="-1" r="3.5" fill="#22d3ee" class="node-1"/>
+    <text x="-88" y="3" font-family="'Segoe UI', monospace" font-size="10.5" font-weight="700" fill="#38bdf8" letter-spacing="2">SYSTEM PROTOCOL // ONLINE</text>
+  </g>
+
+  <!-- MAIN TITLE: AKSHAY SHIVAJI RATHOD -->
+  <text x="450" y="105" text-anchor="middle" font-size="40" fill="url(#cyanGlow)" class="title-text">
+    AKSHAY SHIVAJI RATHOD
+  </text>
+
+  <!-- SUBTITLE -->
+  <text x="450" y="145" text-anchor="middle" font-size="14.5" fill="url(#subGrad)" class="sub-text">
+    AI &amp; MACHINE LEARNING ENGINEER  •  FULL-STACK ARCHITECT
+  </text>
+
+  <!-- PUNCHLINE BADGES IN SVG -->
+  <g transform="translate(450, 182)">
+    <text x="0" y="0" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#38bdf8" letter-spacing="1.5">
+      ⚡ Autonomous AI Agents  |  Predictive MLOps  |  120 FPS 3D Web Experiences ⚡
+    </text>
+  </g>
+
+</svg>

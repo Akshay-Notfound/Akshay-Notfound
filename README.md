@@ -1,61 +1,104 @@
 <div align="center">
 
-  <!-- DYNAMIC ANIMATED HEADER WAVE -->
+  <!-- NATIVE ANIMATED CYBER HERO BANNER -->
   <a href="https://akshay-notfound.vercel.app">
-    <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,6,12,18,24&height=220&section=header&text=AKSHAY%20SHIVAJI%20RATHOD&fontSize=48&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=AI%20%26%20Machine%20Learning%20Engineer%20%E2%80%A2%20Full-Stack%20Architect&descAlignY=60&descAlign=50" width="100%" alt="Akshay Shivaji Rathod Header Banner" />
+    <img src="https://raw.githubusercontent.com/Akshay-Notfound/Akshay-Notfound/main/assets/hero-banner.svg" width="100%" alt="Akshay Shivaji Rathod Header Banner" />
   </a>
-
-  <!-- ANIMATED HOLOGRAPHIC AVATAR -->
-  <a href="https://akshay-notfound.vercel.app">
-    <img src="https://raw.githubusercontent.com/Akshay-Notfound/Akshay-Notfound/main/assets/akshay-hologram.gif" width="230" alt="Akshay Shivaji Rathod - Hologram AI Avatar" />
-  </a>
-
-  <br/>
-
-  <!-- ANIMATED TYPING SVG -->
-  <a href="https://akshay-notfound.vercel.app">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=22D3EE&center=true&vCenter=true&multiline=false&width=620&height=50&lines=%F0%9F%91%8B+Hi%2C+I'm+Akshay+Shivaji+Rathod;%F0%9F%A4%96+AI+%26+Machine+Learning+Engineer;%E2%9A%A1+Generative+AI+%26+Autonomous+RAG+Agents;%F0%9F%8C%90+Full-Stack+Architect+%7C+Next.js+%2B+Python;%F0%9F%9A%80+Transforming+Raw+Data+into+Intelligent+Solutions" alt="Typing SVG" />
-  </a>
-
-  <br/>
-
-  <!-- QUICK ACTION BADGES -->
-  <p align="center">
-    <a href="https://akshay-notfound.vercel.app" target="_blank">
-      <img src="https://img.shields.io/badge/🌐%20LIVE%20PORTFOLIO-akshay--notfound.vercel.app-22d3ee?style=for-the-badge&logo=vercel&logoColor=black" alt="Live 3D Website" />
-    </a>
-    <a href="https://www.linkedin.com/in/akshay-rathod-aaab52206/" target="_blank">
-      <img src="https://img.shields.io/badge/💼%20LINKEDIN-Akshay%20Rathod-0ea5e9?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-    </a>
-    <a href="https://akshay-notfound.vercel.app/resume.pdf" target="_blank">
-      <img src="https://img.shields.io/badge/📄%20RESUME-Download%20PDF-38bdf8?style=for-the-badge&logo=googledocs&logoColor=white" alt="Resume" />
-    </a>
-    <a href="mailto:akshayrathod.dev@gmail.com">
-      <img src="https://img.shields.io/badge/✉️%20GET%20IN%20TOUCH-Email%20Me-6366f1?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-    </a>
-    <img src="https://komarev.com/ghpvc/?username=Akshay-Notfound&label=PROFILE%20VIEWS&color=0ea5e9&style=for-the-badge" alt="Profile Views" />
-  </p>
 
 </div>
 
+<br/>
+
+<!-- PROPERLY ALIGNED SPLIT HERO: PICTURE + IDENTITY + QUICK ACTIONS -->
+<table border="0" width="100%">
+  <tr>
+    <td width="35%" align="center" valign="middle">
+      <a href="https://akshay-notfound.vercel.app">
+        <img src="https://raw.githubusercontent.com/Akshay-Notfound/Akshay-Notfound/main/assets/akshay-hologram.gif" width="220" alt="Akshay Shivaji Rathod Holographic Avatar" />
+      </a>
+      <br/>
+      <b>AKSHAY SHIVAJI RATHOD</b><br/>
+      <img src="https://img.shields.io/badge/STATUS-ONLINE%20%5BAI__CORE%5D-22d3ee?style=flat-square" alt="Status Online" />
+    </td>
+    <td width="65%" valign="middle">
+      <h3>👋 Hello, World! I'm <a href="https://akshay-notfound.vercel.app"><span style="color:#22d3ee;">Akshay Shivaji Rathod</span></a></h3>
+      <p>
+        <a href="https://akshay-notfound.vercel.app">
+          <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2800&pause=1000&color=22D3EE&multiline=false&width=550&height=30&lines=%F0%9F%A4%96+AI+%26+Machine+Learning+Engineer;%E2%9A%A1+Generative+AI+%26+Autonomous+RAG+Agents;%F0%9F%8C%90+Full-Stack+Architect+%7C+Next.js+%2B+Python;%F0%9F%9A%80+Crafting+120+FPS+Cinematic+3D+Web+Experiences" alt="Typing SVG" />
+        </a>
+      </p>
+      <p>
+        A passionate <b>AI & ML Engineer</b> and <b>Full-Stack Developer</b> specializing in architecting autonomous LLM & RAG pipelines, predictive analytics dashboards, computer vision interfaces, and high-performance 120 FPS 3D web applications.
+      </p>
+      <p>
+        <a href="https://akshay-notfound.vercel.app" target="_blank">
+          <img src="https://img.shields.io/badge/🌐%20LIVE%20PORTFOLIO-akshay--notfound.vercel.app-22d3ee?style=for-the-badge&logo=vercel&logoColor=black" alt="Live Portfolio" />
+        </a>
+        <a href="https://www.linkedin.com/in/akshay-rathod-aaab52206/" target="_blank">
+          <img src="https://img.shields.io/badge/💼%20LINKEDIN-Akshay%20Rathod-0ea5e9?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+        </a>
+        <a href="https://akshay-notfound.vercel.app/resume.pdf" target="_blank">
+          <img src="https://img.shields.io/badge/📄%20RESUME-Download%20PDF-38bdf8?style=for-the-badge&logo=googledocs&logoColor=white" alt="Resume" />
+        </a>
+        <a href="mailto:akshayrathod.dev@gmail.com">
+          <img src="https://img.shields.io/badge/✉️%20CONTACT-Email%20Me-6366f1?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+        </a>
+      </p>
+    </td>
+  </tr>
+</table>
+
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
 
-### 👨‍💻 System Dossier & About Me
+### 🌟 About Me & Core Capabilities
 
-```bash
-┌── ⚡ SYSTEM_DOSSIER // AKSHAY_RATHOD ────────────────────────────────────────────────┐
-│  ▸ Specialization : Artificial Intelligence, Machine Learning & Full-Stack Systems   │
-│  ▸ Degree         : B.Tech in AI & ML (Honors / Top Rank Candidate)                  │
-│  ▸ Core Passions  : GenAI Agents, Computer Vision, Real-Time BI & 120 FPS 3D Web     │
-│  ▸ Current Focus  : Automated Data Analytics (DataMind AI) & Enterprise RAG Pipelines│
-│  ▸ Philosophy     : "Turning complex data into intuitive, intelligent decisions."    │
-└──────────────────────────────────────────────────────────────────────────────────────┘
-```
+> 💡 *"I don't just build models—I build intelligent, end-to-end ecosystems. From fine-tuning neural networks and architecting autonomous RAG agents to engineering 120 FPS liquid chrome 3D web apps, I turn complex data into intuitive, high-impact products."*
 
-- 🤖 **AI & Machine Learning:** Developing predictive models, deep neural networks, NLP pipelines, and computer-vision-driven assistive technologies.
-- ⚡ **Full-Stack & Cloud:** Architecting end-to-end cloud platforms with **Next.js 14**, **TypeScript**, **Python**, **Django**, and **Google Cloud Platform**.
-- 📊 **Big Data & Analytics:** Transforming unstructured data into interactive business intelligence dashboards and automated ML workflows.
-- 🎨 **Creative Engineering:** Designing cinematic, interactive 3D web experiences using **Three.js** and **React Three Fiber**.
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🧠 Artificial Intelligence & ML</h4>
+      <ul>
+        <li><b>Generative AI & RAG:</b> Enterprise multi-agent systems, semantic search, vector embeddings & hallucination guardrails.</li>
+        <li><b>Predictive Modeling:</b> Classification, NLP pipelines, and regression using Scikit-Learn, PyTorch, and TensorFlow.</li>
+        <li><b>Computer Vision:</b> Real-time facial landmark detection and eyelid tracking with OpenCV (Virtual Eye Mouse).</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h4>⚡ Full-Stack & Cloud Architecture</h4>
+      <ul>
+        <li><b>Modern Frontend:</b> Next.js 14 (App Router, Server Actions), TypeScript, React, and Tailwind CSS.</li>
+        <li><b>Scalable Backend:</b> High-throughput APIs & microservices using Python (Django, FastAPI) and Node.js.</li>
+        <li><b>Cloud & Storage:</b> Scalable deployments on Google Cloud Platform & Vercel with PostgreSQL, MongoDB & Firebase.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>📊 Data Intelligence & Automated BI</h4>
+      <ul>
+        <li><b>Automated BI Platforms:</b> Architect of <b>DataMind AI</b> — dynamic chart explorers and instant analytics generation.</li>
+        <li><b>AutoML Engines:</b> Automated preprocessing, hyperparameter optimization & supply chain demand forecasting.</li>
+        <li><b>Exploratory Data Analysis:</b> Statistical modeling, churn prediction, and enterprise KPI dashboards.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🎨 Creative Engineering & 3D Web</h4>
+      <ul>
+        <li><b>High-Performance WebGL:</b> 120 FPS liquid chrome fluid physics with Three.js & React Three Fiber.</li>
+        <li><b>Procedural Audio:</b> Web Audio API synthesizer for dynamic sound transitions with zero external audio assets.</li>
+        <li><b>Cinematic UI/UX:</b> Anamorphic cinema aspect ratios, HUD telemetry, and spring-damped interactive physics.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/🎓%20Degree-B.Tech%20in%20AI%20%26%20ML%20(Top%20Rank)-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/☁️%20Certification%20Track-Google%20Cloud%20PDE-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/📦%20Open%20Source-29%2B%20Repositories-emerald?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/⚡%20Performance-120%20FPS%20Fluid-22d3ee?style=for-the-badge" />
+</div>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
 
@@ -95,7 +138,7 @@
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
 
-### 🚀 Flagship Engineering Projects
+### 🚀 Featured Engineering Projects
 
 <table align="center" width="100%">
   <tr>
