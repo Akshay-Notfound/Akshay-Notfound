@@ -1,0 +1,115 @@
+<svg width="900" height="210" viewBox="0 0 900 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070c18"/>
+      <stop offset="100%" stop-color="#0d1424"/>
+    </linearGradient>
+    <filter id="cursorGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes blinkCursor {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+    @keyframes lineGlow {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 1; }
+    }
+    .cursor {
+      animation: blinkCursor 0.9s infinite ease-in-out;
+    }
+    .code-font {
+      font-family: 'Fira Code', 'Cascadia Code', Consolas, 'Courier New', monospace;
+      font-size: 11.5px;
+      line-height: 1.6;
+    }
+  </style>
+
+  <!-- Terminal Window Shell -->
+  <rect width="900" height="210" rx="10" fill="url(#termBg)" stroke="#1e293b" stroke-width="1.2"/>
+
+  <!-- Top Title Bar -->
+  <path d="M 0 10 Q 0 0 10 0 L 890 0 Q 900 0 900 10 L 900 30 L 0 30 Z" fill="#0b1120"/>
+  <line x1="0" y1="30" x2="900" y2="30" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Window Dots -->
+  <circle cx="20" cy="15" r="5" fill="#ef4444"/>
+  <circle cx="36" cy="15" r="5" fill="#f59e0b"/>
+  <circle cx="52" cy="15" r="5" fill="#10b981"/>
+
+  <!-- Title Center -->
+  <text x="450" y="19" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#64748b" letter-spacing="1">
+    akshay@analytics-core: ~/telemetry (data-pipeline)
+  </text>
+
+  <!-- Live Pulse Dot -->
+  <circle cx="875" cy="15" r="3.5" fill="#22d3ee" class="cursor"/>
+
+  <!-- Terminal Content Lines -->
+  <g class="code-font" transform="translate(25, 55)">
+    <!-- Command Line -->
+    <text x="0" y="0">
+      <tspan fill="#22d3ee" font-weight="700">akshay@core:~$</tspan>
+      <tspan fill="#f1f5f9"> ./run_enterprise_pipeline.py --engine pyspark --bi powerbi,tableau</tspan>
+    </text>
+
+    <!-- Execution Logs -->
+    <text x="0" y="22">
+      <tspan fill="#10b981" font-weight="700">[✓] INGESTION:</tspan>
+      <tspan fill="#94a3b8"> Extracted 2.5M+ records from </tspan>
+      <tspan fill="#38bdf8" font-weight="600">MySQL Database</tspan>
+      <tspan fill="#94a3b8"> &amp; curated </tspan>
+      <tspan fill="#22c55e" font-weight="600">Microsoft Excel</tspan>
+      <tspan fill="#94a3b8"> sheets</tspan>
+    </text>
+
+    <text x="0" y="44">
+      <tspan fill="#10b981" font-weight="700">[✓] WAREHOUSE:</tspan>
+      <tspan fill="#94a3b8"> Streamed into </tspan>
+      <tspan fill="#60a5fa" font-weight="600">Google BigQuery</tspan>
+      <tspan fill="#94a3b8"> clustered tables with partition indexing</tspan>
+    </text>
+
+    <text x="0" y="66">
+      <tspan fill="#10b981" font-weight="700">[✓] DISTRIBUTED:</tspan>
+      <tspan fill="#94a3b8"> Parallel transform executed via </tspan>
+      <tspan fill="#fb923c" font-weight="600">Apache PySpark</tspan>
+      <tspan fill="#94a3b8"> DAGs in </tspan>
+      <tspan fill="#f97316" font-weight="600">Jupyter Lab</tspan>
+    </text>
+
+    <text x="0" y="88">
+      <tspan fill="#10b981" font-weight="700">[✓] PRESENTATION:</tspan>
+      <tspan fill="#94a3b8"> Automated KPI synchronization to </tspan>
+      <tspan fill="#facc15" font-weight="700">Power BI</tspan>
+      <tspan fill="#94a3b8"> &amp; </tspan>
+      <tspan fill="#fb923c" font-weight="700">Tableau</tspan>
+      <tspan fill="#94a3b8"> executive decks</tspan>
+    </text>
+
+    <text x="0" y="110">
+      <tspan fill="#10b981" font-weight="700">[✓] DEPLOYMENT:</tspan>
+      <tspan fill="#94a3b8"> Real-time self-service web app online via </tspan>
+      <tspan fill="#f87171" font-weight="700">Streamlit</tspan>
+      <tspan fill="#94a3b8"> (port :8501)</tspan>
+    </text>
+
+    <!-- Status Banner Line -->
+    <text x="0" y="134">
+      <tspan fill="#22d3ee" font-weight="700">&gt;&gt; PIPELINE STATUS:</tspan>
+      <tspan fill="#4ade80" font-weight="700"> 100% HEALTHY </tspan>
+      <tspan fill="#64748b">|</tspan>
+      <tspan fill="#38bdf8"> 0 LATENCY DROPS </tspan>
+      <tspan fill="#64748b">|</tspan>
+      <tspan fill="#a855f7"> READY FOR DECISION INTELLIGENCE</tspan>
+      <tspan fill="#22d3ee" class="cursor" filter="url(#cursorGlow)"> █</tspan>
+    </text>
+  </g>
+</svg>

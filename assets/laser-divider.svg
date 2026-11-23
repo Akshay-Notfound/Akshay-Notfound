@@ -1,0 +1,66 @@
+<svg width="100%" height="16" viewBox="0 0 900 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#22d3ee" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="75%" stop-color="#818cf8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="pulseBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="laserGlow" x="-20%" y="-100%" width="140%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes laserScan {
+      0% { transform: translateX(-300px); }
+      100% { transform: translateX(950px); }
+    }
+    @keyframes diamondPulse {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.3); filter: drop-shadow(0 0 6px #22d3ee); }
+    }
+    .scanner {
+      animation: laserScan 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    .core-diamond {
+      transform-origin: 450px 8px;
+      animation: diamondPulse 2.5s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Ambient Background Glow -->
+  <line x1="80" y1="8" x2="820" y2="8" stroke="url(#divGrad)" stroke-width="2" filter="url(#laserGlow)"/>
+  
+  <!-- Sharp Center Track -->
+  <line x1="120" y1="8" x2="780" y2="8" stroke="url(#divGrad)" stroke-width="1.2"/>
+
+  <!-- Scanning Energy Packet -->
+  <g class="scanner">
+    <line x1="0" y1="8" x2="180" y2="8" stroke="url(#pulseBeam)" stroke-width="2.5" filter="url(#laserGlow)"/>
+  </g>
+
+  <!-- Cyber Endpoints -->
+  <circle cx="80" cy="8" r="2.5" fill="#22d3ee" opacity="0.6"/>
+  <circle cx="820" cy="8" r="2.5" fill="#818cf8" opacity="0.6"/>
+
+  <!-- Central Diamond Telemetry Node -->
+  <g class="core-diamond">
+    <rect x="446" y="4" width="8" height="8" rx="1.5" transform="rotate(45 450 8)" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+    <circle cx="450" cy="8" r="2" fill="#38bdf8"/>
+  </g>
+</svg>

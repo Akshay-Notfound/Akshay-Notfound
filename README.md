@@ -19,16 +19,17 @@
       <br/>
       <b>AKSHAY SHIVAJI RATHOD</b><br/>
       <img src="https://img.shields.io/badge/STATUS-ONLINE%20%5BAI__CORE%5D-22d3ee?style=flat-square" alt="Status Online" />
+      <img src="https://img.shields.io/badge/DATA__PIPELINES-100%25%20ACTIVE-00FF88?style=flat-square" alt="Pipelines Active" />
     </td>
     <td width="65%" valign="middle">
       <h3>👋 Hello, World! I'm <a href="https://akshay-notfound.vercel.app"><span style="color:#22d3ee;">Akshay Shivaji Rathod</span></a></h3>
       <p>
         <a href="https://akshay-notfound.vercel.app">
-          <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2800&pause=1000&color=22D3EE&multiline=false&width=550&height=30&lines=%F0%9F%A4%96+AI+%26+Machine+Learning+Engineer;%E2%9A%A1+Generative+AI+%26+Autonomous+RAG+Agents;%F0%9F%8C%90+Full-Stack+Architect+%7C+Next.js+%2B+Python;%F0%9F%9A%80+Crafting+120+FPS+Cinematic+3D+Web+Experiences" alt="Typing SVG" />
+          <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=17&duration=2600&pause=900&color=22D3EE&multiline=false&width=620&height=32&lines=%F0%9F%A4%96+AI+%26+Machine+Learning+Engineer;%F0%9F%93%8A+Data+Analytics+%26+BI+Solutions+Architect;%E2%9A%A1+BigQuery%2C+PySpark+%26+Enterprise+SQL+Pipelines;%F0%9F%93%88+Power+BI+%26+Tableau+Executive+Dashboards;%F0%9F%9A%80+Crafting+120+FPS+Cinematic+3D+Web+Experiences" alt="Typing SVG" />
         </a>
       </p>
       <p>
-        A passionate <b>AI & ML Engineer</b> and <b>Full-Stack Developer</b> specializing in architecting autonomous LLM & RAG pipelines, predictive analytics dashboards, computer vision interfaces, and high-performance 120 FPS 3D web applications.
+        A results-driven <b>Data & AI Engineer</b> and <b>Full-Stack Architect</b> specializing in building end-to-end data pipelines, executive Business Intelligence (BI) dashboards (<b>Power BI</b>, <b>Tableau</b>), distributed compute frameworks (<b>PySpark</b>, <b>BigQuery</b>), and interactive ML platforms (<b>Streamlit</b>, <b>Jupyter</b>).
       </p>
       <p>
         <a href="https://akshay-notfound.vercel.app" target="_blank">
@@ -48,46 +49,47 @@
   </tr>
 </table>
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
+<img src="assets/laser-divider.svg" width="100%" height="16" alt="Laser Divider" />
 
 ### 🌟 About Me & Core Capabilities
 
-> 💡 *"I don't just build models—I build intelligent, end-to-end ecosystems. From fine-tuning neural networks and architecting autonomous RAG agents to engineering 120 FPS liquid chrome 3D web apps, I turn complex data into intuitive, high-impact products."*
+> 💡 *"I don't just build models—I build intelligent, end-to-end data ecosystems. From architecting distributed BigQuery and PySpark data pipelines to creating executive Power BI and Tableau dashboards and deploying 120 FPS liquid chrome 3D web applications, I transform raw data into definitive strategic advantage."*
 
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
-      <h4>🧠 Artificial Intelligence & ML</h4>
+      <h4>📊 Data Analytics & Business Intelligence</h4>
       <ul>
-        <li><b>Generative AI & RAG:</b> Enterprise multi-agent systems, semantic search, vector embeddings & hallucination guardrails.</li>
-        <li><b>Predictive Modeling:</b> Classification, NLP pipelines, and regression using Scikit-Learn, PyTorch, and TensorFlow.</li>
-        <li><b>Computer Vision:</b> Real-time facial landmark detection and eyelid tracking with OpenCV (Virtual Eye Mouse).</li>
+        <li><b>Executive BI Dashboards:</b> Interactive storytelling with <b>Power BI</b> (DAX modeling, Star Schemas) & <b>Tableau</b> (LOD expressions, calculated fields).</li>
+        <li><b>Big Data & Cloud Warehouses:</b> High-throughput analytical processing on <b>Google BigQuery</b> and distributed big data execution with <b>Apache PySpark</b>.</li>
+        <li><b>Relational & Spreadsheet Modeling:</b> Advanced SQL analytics in <b>MySQL</b> and automated financial/operational workbook modeling in <b>Microsoft Excel</b>.</li>
+        <li><b>Interactive Data Apps:</b> Rapid BI prototype deployment and exploratory EDA dashboards using <b>Streamlit</b> and <b>Jupyter Notebooks</b>.</li>
       </ul>
     </td>
     <td width="50%" valign="top">
-      <h4>⚡ Full-Stack & Cloud Architecture</h4>
+      <h4>🧠 Artificial Intelligence & ML</h4>
       <ul>
-        <li><b>Modern Frontend:</b> Next.js 14 (App Router, Server Actions), TypeScript, React, and Tailwind CSS.</li>
-        <li><b>Scalable Backend:</b> High-throughput APIs & microservices using Python (Django, FastAPI) and Node.js.</li>
-        <li><b>Cloud & Storage:</b> Scalable deployments on Google Cloud Platform & Vercel with PostgreSQL, MongoDB & Firebase.</li>
+        <li><b>Generative AI & Autonomous RAG:</b> Multi-agent orchestration, semantic vector embeddings, and zero-hallucination guardrails.</li>
+        <li><b>Predictive Modeling & MLOps:</b> Regression, classification, customer churn models, and demand forecasting with <b>Scikit-Learn</b>, <b>PyTorch</b>, and <b>TensorFlow</b>.</li>
+        <li><b>Computer Vision:</b> Real-time facial landmark detection, eyelid gaze tracking, and assistive HCI using <b>OpenCV</b> (Virtual Eye Mouse).</li>
       </ul>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h4>📊 Data Intelligence & Automated BI</h4>
+      <h4>⚡ Full-Stack & Cloud Architecture</h4>
       <ul>
-        <li><b>Automated BI Platforms:</b> Architect of <b>DataMind AI</b> — dynamic chart explorers and instant analytics generation.</li>
-        <li><b>AutoML Engines:</b> Automated preprocessing, hyperparameter optimization & supply chain demand forecasting.</li>
-        <li><b>Exploratory Data Analysis:</b> Statistical modeling, churn prediction, and enterprise KPI dashboards.</li>
+        <li><b>Modern Frontend:</b> Next.js 14 (App Router, Server Actions), TypeScript, React 18, and Tailwind CSS.</li>
+        <li><b>Scalable Backend & APIs:</b> Microservices and high-throughput REST APIs using Python (FastAPI, Django) and Node.js.</li>
+        <li><b>Cloud & Database Infrastructure:</b> Cloud deployments on GCP & Vercel with PostgreSQL, MongoDB, MySQL & Firebase.</li>
       </ul>
     </td>
     <td width="50%" valign="top">
       <h4>🎨 Creative Engineering & 3D Web</h4>
       <ul>
-        <li><b>High-Performance WebGL:</b> 120 FPS liquid chrome fluid physics with Three.js & React Three Fiber.</li>
-        <li><b>Procedural Audio:</b> Web Audio API synthesizer for dynamic sound transitions with zero external audio assets.</li>
-        <li><b>Cinematic UI/UX:</b> Anamorphic cinema aspect ratios, HUD telemetry, and spring-damped interactive physics.</li>
+        <li><b>High-Performance WebGL:</b> 120 FPS liquid chrome fluid simulation running on Three.js & React Three Fiber.</li>
+        <li><b>Procedural Audio Engine:</b> Dynamic Web Audio API synthesizer for sound transitions with zero external MP3s.</li>
+        <li><b>Cinematic Telemetry UI:</b> Tactical anamorphic HUD telemetry, real-time FPS monitors, and spring-damped physics.</li>
       </ul>
     </td>
   </tr>
@@ -96,15 +98,54 @@
 <div align="center">
   <img src="https://img.shields.io/badge/🎓%20Degree-B.Tech%20in%20AI%20%26%20ML%20(Top%20Rank)-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/☁️%20Certification%20Track-Google%20Cloud%20PDE-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" />
-  <img src="https://img.shields.io/badge/📦%20Open%20Source-29%2B%20Repositories-emerald?style=for-the-badge&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/⚡%20Performance-120%20FPS%20Fluid-22d3ee?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/📊%20Data%20Specialization-BigQuery%20%26%20PySpark-f59e0b?style=for-the-badge&logo=apachespark&logoColor=white" />
+  <img src="https://img.shields.io/badge/📈%20BI%20Certified-Power%20BI%20%7C%20Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" />
 </div>
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
+<br/>
+
+<!-- ANIMATED TERMINAL TELEMETRY -->
+<div align="center">
+  <img src="assets/analytics-terminal.svg" width="100%" alt="Analytics Terminal Telemetry" />
+</div>
+
+<img src="assets/laser-divider.svg" width="100%" height="16" alt="Laser Divider" />
 
 ### 🛠️ Interactive Tech Stack & Capabilities
 
 <div align="center">
+
+#### 📊 Data Analytics, Business Intelligence & Big Data
+<p align="center">
+  <!-- Native Animated Dark Theme Badges matching SkillIcons styling -->
+  <img src="assets/data-analytics-stack.svg" alt="Data Analytics Tech Stack - Power BI, Tableau, Jupyter, Streamlit, Excel, MySQL, BigQuery, PySpark" />
+</p>
+<p align="center">
+  <a href="https://powerbi.microsoft.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" />
+  </a>
+  <a href="https://www.tableau.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau" />
+  </a>
+  <a href="https://jupyter.org/" target="_blank">
+    <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter" />
+  </a>
+  <a href="https://streamlit.io/" target="_blank">
+    <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit" />
+  </a>
+  <a href="https://www.microsoft.com/excel" target="_blank">
+    <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="Microsoft Excel" />
+  </a>
+  <a href="https://www.mysql.com/" target="_blank">
+    <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  </a>
+  <a href="https://cloud.google.com/bigquery" target="_blank">
+    <img src="https://img.shields.io/badge/BigQuery-669DF6?style=for-the-badge&logo=googlebigquery&logoColor=white" alt="Google BigQuery" />
+  </a>
+  <a href="https://spark.apache.org/" target="_blank">
+    <img src="https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white" alt="Apache PySpark" />
+  </a>
+</p>
 
 #### 🧠 Artificial Intelligence & Data Science
 <p align="center">
@@ -136,23 +177,45 @@
 
 </div>
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
+<br/>
 
-### 🚀 Featured Engineering Projects
+<!-- ANIMATED DATA PIPELINE ARCHITECTURE FLOW -->
+<div align="center">
+  <img src="assets/analytics-pipeline.svg" width="100%" alt="End-to-End Data Analytics Pipeline Flow" />
+</div>
+
+<img src="assets/laser-divider.svg" width="100%" height="16" alt="Laser Divider" />
+
+### 🚀 Featured Engineering & Analytics Projects
 
 <table align="center" width="100%">
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">🔮 DataMind AI</h3>
+      <h3 align="center">🔮 DataMind AI (Automated BI &amp; Analytics)</h3>
       <p align="center">
         <img src="https://img.shields.io/badge/Next.js-TypeScript-3178c6?style=flat-square&logo=next.js" />
-        <img src="https://img.shields.io/badge/AI-Data%20Analytics-22d3ee?style=flat-square" />
+        <img src="https://img.shields.io/badge/BI-Power%20BI%20%7C%20Tableau-F2C811?style=flat-square" />
+        <img src="https://img.shields.io/badge/Analytics-BigQuery-669DF6?style=flat-square" />
       </p>
-      <p>An end-to-end automated data analysis and Business Intelligence platform. Bridges raw data with actionable business insights through dynamic chart generation, global slicers, and AI-driven processing.</p>
+      <p>An enterprise automated data analysis and Business Intelligence platform. Transforms raw SQL and tabular data into actionable executive insights with dynamic chart generation, automated slicers, and AI-driven exploratory modeling.</p>
       <p align="center">
         <a href="https://github.com/Akshay-Notfound/datamind-analytics"><b>📂 Explore Code »</b></a>
       </p>
     </td>
+    <td width="50%" valign="top">
+      <h3 align="center">📊 AutoML Web Dashboard (Streamlit &amp; MLOps)</h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Python-Streamlit-ff4b4b?style=flat-square&logo=streamlit" />
+        <img src="https://img.shields.io/badge/PySpark-Distributed-E25A1C?style=flat-square" />
+        <img src="https://img.shields.io/badge/MLOps-Predictive-22d3ee?style=flat-square" />
+      </p>
+      <p>Self-service automated machine learning and predictive analytics platform. Allows analysts to ingest raw Excel/CSV data, perform automatic EDA, train regression/classification models, and forecast supply chain demand.</p>
+      <p align="center">
+        <a href="https://github.com/Akshay-Notfound/AutoML-Web-Dashboard"><b>📂 Explore Code »</b></a>
+      </p>
+    </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h3 align="center">🛡️ Real-Time Fake News Detector</h3>
       <p align="center">
@@ -162,19 +225,6 @@
       <p>AI-driven verification engine for real-time news validation. Integrates the Mediastack API for live feeds, single-article NLP classification, and batch CSV processing with high predictive accuracy.</p>
       <p align="center">
         <a href="https://github.com/Akshay-Notfound/Real-time-Fake-News-Detection"><b>📂 Explore Code »</b></a>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3 align="center">📊 AutoML Web Dashboard</h3>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Python-Streamlit-ff4b4b?style=flat-square&logo=streamlit" />
-        <img src="https://img.shields.io/badge/MLOps-Predictive-22d3ee?style=flat-square" />
-      </p>
-      <p>Automated machine learning platform allowing users to upload datasets, run automated preprocessing, train/benchmark multiple ML models, and generate supply chain demand forecasting analytics.</p>
-      <p align="center">
-        <a href="https://github.com/Akshay-Notfound/AutoML-Web-Dashboard"><b>📂 Explore Code »</b></a>
       </p>
     </td>
     <td width="50%" valign="top">
@@ -232,7 +282,17 @@
   </table>
 </div>
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
+<img src="assets/laser-divider.svg" width="100%" height="16" alt="Laser Divider" />
+
+### 🏆 GitHub Verified Trophies & Recognition
+
+<div align="center">
+  <a href="https://github.com/Akshay-Notfound">
+    <img src="https://github-profile-trophy.vercel.app/?username=Akshay-Notfound&theme=radical&no-frame=true&no-bg=true&margin-w=4" alt="Akshay's GitHub Trophies" />
+  </a>
+</div>
+
+<br/>
 
 ### 📈 Contribution Velocity & Interactive Activity Graph
 
@@ -242,7 +302,7 @@
   </a>
 </div>
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
+<img src="assets/laser-divider.svg" width="100%" height="16" alt="Laser Divider" />
 
 ### 🐍 Contribution Activity & Snake Animation
 
@@ -254,7 +314,7 @@
   </picture>
 </div>
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
+<img src="assets/laser-divider.svg" width="100%" height="16" alt="Laser Divider" />
 
 ### 📊 GitHub Analytics & Streak Metrics
 
@@ -282,7 +342,7 @@
   </table>
 </div>
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
+<img src="assets/laser-divider.svg" width="100%" height="16" alt="Laser Divider" />
 
 ### 🎯 Interactive Dossier & Deep Dive
 
@@ -292,8 +352,9 @@
   <table>
     <tr><th>Component</th><th>Specification</th></tr>
     <tr><td><b>Operating System</b></td><td>Windows 11 Pro / Ubuntu WSL2 Linux</td></tr>
-    <tr><td><b>Terminal & Shell</b></td><td>PowerShell 7 & Zsh with Starship prompt</td></tr>
-    <tr><td><b>Code Editor</b></td><td>VS Code & Antigravity IDE (Cyber/Dark Theme, JetBrains Mono)</td></tr>
+    <tr><td><b>Terminal & Shell</b></td><td>PowerShell 7 &amp; Zsh with Starship prompt</td></tr>
+    <tr><td><b>Code Editor</b></td><td>VS Code &amp; Antigravity IDE (Cyber/Dark Theme, JetBrains Mono)</td></tr>
+    <tr><td><b>Data &amp; BI Tooling</b></td><td>Power BI Desktop, Tableau Desktop, Google BigQuery Console, Jupyter Lab</td></tr>
     <tr><td><b>AI Tooling</b></td><td>Cursor, GitHub Copilot, Gemini CLI, Ollama Local LLMs</td></tr>
     <tr><td><b>Version Control</b></td><td>Git, GitHub CLI, Automated GitHub Actions CI/CD</td></tr>
   </table>
@@ -304,8 +365,9 @@
   <br/>
   <ul>
     <li>🎯 <b>Google Cloud Professional Data Engineer (PDE)</b> Certification completion.</li>
+    <li>📊 Architect real-time streaming pipelines connecting <b>BigQuery</b> with automated <b>Power BI</b> &amp; <b>Tableau</b> semantic models.</li>
     <li>🤖 Build and deploy multi-agent LLM systems with autonomous tool calling and self-healing loops.</li>
-    <li>⚡ Optimize deep learning inference pipelines with ONNX Runtime and TensorRT.</li>
+    <li>⚡ Optimize distributed <b>PySpark</b> data transformations and deep learning inference pipelines.</li>
     <li>🌐 Publish open-source React Three Fiber + Next.js interactive templates.</li>
   </ul>
 </details>
@@ -348,7 +410,7 @@
     </a>
   </p>
 
-  <sub>Crafted with passion, neural networks & code by <b>Akshay Shivaji Rathod</b>. Let's build something extraordinary together! 🚀</sub>
+  <sub>Crafted with passion, data intelligence &amp; neural networks by <b>Akshay Shivaji Rathod</b>. Let's build something extraordinary together! 🚀</sub>
 
   <!-- FOOTER WAVE -->
   <a href="https://akshay-notfound.vercel.app">
