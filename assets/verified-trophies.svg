@@ -1,0 +1,220 @@
+<svg width="880" height="135" viewBox="0 0 880 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="trophyShelfBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080d1a"/>
+      <stop offset="50%" stop-color="#0e1726"/>
+      <stop offset="100%" stop-color="#080d1a"/>
+    </linearGradient>
+
+    <!-- Metallic Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+
+    <!-- Cyan Laser Gradient -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a5f3fc"/>
+      <stop offset="50%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+
+    <!-- Emerald Gradient -->
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a7f3d0"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+
+    <!-- Purple Gradient -->
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e9d5ff"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </linearGradient>
+
+    <!-- Card Background -->
+    <linearGradient id="cardFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#131d31"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+
+    <!-- Shimmer Bar Gradient -->
+    <linearGradient id="trophyShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glowTrophy">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseAura {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.9; }
+    }
+    @keyframes sweepShimmer {
+      0% { transform: translateX(-300px); }
+      100% { transform: translateX(1100px); }
+    }
+    .aura {
+      animation: pulseAura 3s ease-in-out infinite;
+    }
+    .shimmer-sweep {
+      animation: sweepShimmer 5s ease-in-out infinite;
+    }
+    .badge-label {
+      font-family: 'Segoe UI', -apple-system, sans-serif;
+      font-size: 8.5px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .sub-label {
+      font-family: 'Segoe UI', monospace, sans-serif;
+      font-size: 8px;
+      font-weight: 600;
+    }
+    .grade-badge {
+      font-family: 'Segoe UI', monospace;
+      font-size: 8px;
+      font-weight: 900;
+    }
+  </style>
+
+  <!-- Shell Frame -->
+  <rect width="880" height="135" rx="12" fill="url(#trophyShelfBg)" stroke="#1e293b" stroke-width="1.2"/>
+
+  <!-- ==================== TROPHY 1: MASTER COMMITS (x=12) ==================== -->
+  <g transform="translate(12, 12)">
+    <rect width="134" height="111" rx="9" fill="url(#cardFill)" stroke="#ca8a04" stroke-width="1" stroke-opacity="0.6"/>
+    <!-- Grade Pill -->
+    <rect x="94" y="8" width="32" height="14" rx="4" fill="#854d0e" stroke="#facc15" stroke-width="0.8"/>
+    <text x="110" y="18" text-anchor="middle" fill="#fef08a" class="grade-badge">SSS</text>
+    <!-- Trophy Cup Graphic -->
+    <g transform="translate(48, 14)" filter="url(#glowTrophy)">
+      <path d="M10 6h18v10c0 5-4 9-9 9s-9-4-9-9V6z" fill="url(#goldGrad)"/>
+      <path d="M5 8h5v5c0 3-2 4-5 4v-9zM33 8h-5v5c0 3 2 4 5 4v-9z" fill="url(#goldGrad)" opacity="0.8"/>
+      <rect x="16" y="25" width="6" height="7" fill="url(#goldGrad)"/>
+      <rect x="11" y="32" width="16" height="4" rx="2" fill="url(#goldGrad)"/>
+      <!-- Star in cup -->
+      <polygon points="19,10 20.5,14 24,14 21,16.5 22.5,20.5 19,18 15.5,20.5 17,16.5 14,14 17.5,14" fill="#ffffff" opacity="0.9"/>
+    </g>
+    <!-- Text Labels -->
+    <text x="67" y="74" text-anchor="middle" fill="#fef08a" class="badge-label">COMMITS</text>
+    <text x="67" y="88" text-anchor="middle" fill="#e2e8f0" class="sub-label">Master Contributor</text>
+    <text x="67" y="101" text-anchor="middle" fill="#ca8a04" class="sub-label">VERIFIED TIER</text>
+  </g>
+
+  <!-- ==================== TROPHY 2: AI & ML ARCHITECT (x=156) ==================== -->
+  <g transform="translate(156, 12)">
+    <rect width="134" height="111" rx="9" fill="url(#cardFill)" stroke="#9333ea" stroke-width="1" stroke-opacity="0.6"/>
+    <!-- Grade Pill -->
+    <rect x="94" y="8" width="32" height="14" rx="4" fill="#581c87" stroke="#c084fc" stroke-width="0.8"/>
+    <text x="110" y="18" text-anchor="middle" fill="#f3e8ff" class="grade-badge">SSS</text>
+    <!-- AI Brain Graphic -->
+    <g transform="translate(48, 14)" filter="url(#glowTrophy)">
+      <circle cx="19" cy="18" r="14" fill="#2e1065" stroke="url(#purpleGrad)" stroke-width="1.8"/>
+      <path d="M12 18h14M19 11v14M14 13l10 10M14 23l10-10" stroke="url(#purpleGrad)" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="19" cy="18" r="4" fill="#ffffff"/>
+      <circle cx="19" cy="11" r="2.5" fill="#c084fc"/>
+      <circle cx="26" cy="18" r="2.5" fill="#c084fc"/>
+      <circle cx="19" cy="25" r="2.5" fill="#c084fc"/>
+      <circle cx="12" cy="18" r="2.5" fill="#c084fc"/>
+    </g>
+    <!-- Text Labels -->
+    <text x="67" y="74" text-anchor="middle" fill="#e9d5ff" class="badge-label">AI &amp; ML SPECIALIST</text>
+    <text x="67" y="88" text-anchor="middle" fill="#e2e8f0" class="sub-label">Autonomous RAG &amp; CV</text>
+    <text x="67" y="101" text-anchor="middle" fill="#a855f7" class="sub-label">PYTORCH • TF</text>
+  </g>
+
+  <!-- ==================== TROPHY 3: DATA WAREHOUSE & BIGQUERY (x=300) ==================== -->
+  <g transform="translate(300, 12)">
+    <rect width="134" height="111" rx="9" fill="url(#cardFill)" stroke="#0284c7" stroke-width="1" stroke-opacity="0.6"/>
+    <!-- Grade Pill -->
+    <rect x="94" y="8" width="32" height="14" rx="4" fill="#075985" stroke="#38bdf8" stroke-width="0.8"/>
+    <text x="110" y="18" text-anchor="middle" fill="#e0f2fe" class="grade-badge">SSS</text>
+    <!-- Cloud Big Data Stack -->
+    <g transform="translate(48, 14)" filter="url(#glowTrophy)">
+      <ellipse cx="19" cy="12" rx="14" ry="5" fill="url(#cyanGrad)"/>
+      <path d="M5 12v7c0 2.8 6.3 5 14 5s14-2.2 14-5v-7" fill="none" stroke="url(#cyanGrad)" stroke-width="1.8"/>
+      <path d="M5 19v7c0 2.8 6.3 5 14 5s14-2.2 14-5v-7" fill="none" stroke="url(#cyanGrad)" stroke-width="1.8"/>
+      <circle cx="25" cy="25" r="4.5" fill="#0284c7" stroke="#ffffff" stroke-width="1"/>
+    </g>
+    <!-- Text Labels -->
+    <text x="67" y="74" text-anchor="middle" fill="#38bdf8" class="badge-label">BIG DATA PIPELINES</text>
+    <text x="67" y="88" text-anchor="middle" fill="#e2e8f0" class="sub-label">BigQuery • PySpark</text>
+    <text x="67" y="101" text-anchor="middle" fill="#0284c7" class="sub-label">MILLIONS OF ROWS</text>
+  </g>
+
+  <!-- ==================== TROPHY 4: BUSINESS INTELLIGENCE (x=444) ==================== -->
+  <g transform="translate(444, 12)">
+    <rect width="134" height="111" rx="9" fill="url(#cardFill)" stroke="#d97706" stroke-width="1" stroke-opacity="0.6"/>
+    <!-- Grade Pill -->
+    <rect x="94" y="8" width="32" height="14" rx="4" fill="#78350f" stroke="#fbbf24" stroke-width="0.8"/>
+    <text x="110" y="18" text-anchor="middle" fill="#fef3c7" class="grade-badge">SSS</text>
+    <!-- BI Dashboard Bar Chart -->
+    <g transform="translate(48, 14)" filter="url(#glowTrophy)">
+      <rect x="6" y="20" width="6" height="14" rx="2" fill="#d97706"/>
+      <rect x="16" y="12" width="6" height="22" rx="2" fill="#f59e0b"/>
+      <rect x="26" y="5" width="6" height="29" rx="2" fill="#fde047"/>
+      <!-- Metric Trend Arrow -->
+      <path d="M4 22 L16 10 L28 4" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="28,2 32,5 28,8" fill="#ffffff"/>
+    </g>
+    <!-- Text Labels -->
+    <text x="67" y="74" text-anchor="middle" fill="#fde047" class="badge-label">EXECUTIVE BI</text>
+    <text x="67" y="88" text-anchor="middle" fill="#e2e8f0" class="sub-label">Power BI • Tableau</text>
+    <text x="67" y="101" text-anchor="middle" fill="#d97706" class="sub-label">DECISION DECKS</text>
+  </g>
+
+  <!-- ==================== TROPHY 5: OPEN SOURCE (x=588) ==================== -->
+  <g transform="translate(588, 12)">
+    <rect width="134" height="111" rx="9" fill="url(#cardFill)" stroke="#059669" stroke-width="1" stroke-opacity="0.6"/>
+    <!-- Grade Pill -->
+    <rect x="94" y="8" width="32" height="14" rx="4" fill="#064e3b" stroke="#34d399" stroke-width="0.8"/>
+    <text x="110" y="18" text-anchor="middle" fill="#ecfdf5" class="grade-badge">SSS</text>
+    <!-- Cube / Repos Graphic -->
+    <g transform="translate(48, 14)" filter="url(#glowTrophy)">
+      <polygon points="19,5 31,12 19,19 7,12" fill="url(#emeraldGrad)"/>
+      <polygon points="7,14 19,21 19,33 7,26" fill="#047857"/>
+      <polygon points="31,14 19,21 19,33 31,26" fill="#059669"/>
+      <circle cx="19" cy="12" r="3" fill="#ffffff" opacity="0.9"/>
+    </g>
+    <!-- Text Labels -->
+    <text x="67" y="74" text-anchor="middle" fill="#6ee7b7" class="badge-label">OPEN SOURCE</text>
+    <text x="67" y="88" text-anchor="middle" fill="#e2e8f0" class="sub-label">29+ Repositories</text>
+    <text x="67" y="101" text-anchor="middle" fill="#059669" class="sub-label">ARCHITECT LEVEL</text>
+  </g>
+
+  <!-- ==================== TROPHY 6: 120 FPS 3D WEB (x=732) ==================== -->
+  <g transform="translate(732, 12)">
+    <rect width="134" height="111" rx="9" fill="url(#cardFill)" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+    <!-- Grade Pill -->
+    <rect x="94" y="8" width="32" height="14" rx="4" fill="#164e63" stroke="#67e8f9" stroke-width="0.8"/>
+    <text x="110" y="18" text-anchor="middle" fill="#ecfeff" class="grade-badge">SSS</text>
+    <!-- Gamepad & 3D Spark Graphic -->
+    <g transform="translate(48, 14)" filter="url(#glowTrophy)">
+      <circle cx="19" cy="19" r="14" fill="#083344" stroke="url(#cyanGrad)" stroke-width="1.8"/>
+      <!-- Gamepad Icon -->
+      <path d="M12 19h14M19 12v14" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="13" cy="13" r="2" fill="#38bdf8"/>
+      <circle cx="25" cy="25" r="2" fill="#38bdf8"/>
+    </g>
+    <!-- Text Labels -->
+    <text x="67" y="74" text-anchor="middle" fill="#67e8f9" class="badge-label">120 FPS WEBGL</text>
+    <text x="67" y="88" text-anchor="middle" fill="#e2e8f0" class="sub-label">Fluid Three.js Core</text>
+    <text x="67" y="101" text-anchor="middle" fill="#0891b2" class="sub-label">CINEMATIC 3D</text>
+  </g>
+
+  <!-- Shimmer Light Sweep -->
+  <rect x="0" y="0" width="120" height="135" fill="url(#trophyShimmer)" class="shimmer-sweep" pointer-events="none"/>
+</svg>
