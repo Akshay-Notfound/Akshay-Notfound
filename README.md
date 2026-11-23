@@ -99,7 +99,7 @@
 </table>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/🎓%20Degree-B.Tech%20in%20AI%20%26%20ML%20(Top%20Rank)-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/🎓%20Degree-B.Tech%20in%20AI%20%26%20ML%20-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/☁️%20Certification%20Track-Google%20Cloud%20PDE-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" />
   <img src="https://img.shields.io/badge/📊%20Data%20Specialization-BigQuery%20%26%20PySpark-f59e0b?style=for-the-badge&logo=apachespark&logoColor=white" />
   <img src="https://img.shields.io/badge/📈%20BI%20Certified-Power%20BI%20%7C%20Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" />
