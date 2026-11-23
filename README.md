@@ -35,6 +35,9 @@
         <a href="https://akshay-notfound.vercel.app" target="_blank">
           <img src="https://img.shields.io/badge/🌐%20LIVE%20PORTFOLIO-akshay--notfound.vercel.app-22d3ee?style=for-the-badge&logo=vercel&logoColor=black" alt="Live Portfolio" />
         </a>
+        <a href="https://akshay-notfound.vercel.app#coder-arcade" target="_blank">
+          <img src="https://img.shields.io/badge/🎮%20CODER%20ARCADE-Play%20Online-ff007f?style=for-the-badge" alt="Play Coder Arcade Game" />
+        </a>
         <a href="https://www.linkedin.com/in/akshay-rathod-aaab52206/" target="_blank">
           <img src="https://img.shields.io/badge/💼%20LINKEDIN-Akshay%20Rathod-0ea5e9?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
         </a>

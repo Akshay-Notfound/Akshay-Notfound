@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
-import { Menu, X, FileDown, Volume2, VolumeX, Sliders } from "lucide-react";
+import { Menu, X, FileDown, Volume2, VolumeX, Sliders, Gamepad2 } from "lucide-react";
 import { useCinematic } from "@/components/providers/CinematicProvider";
 import { QualityTier } from "@/config/cinematic";
 
@@ -49,6 +49,7 @@ export default function Navbar() {
     { name: "Projects", href: "#projects" },
     { name: "Experience", href: "#experience" },
     { name: "Certifications", href: "#certifications" },
+    { name: "Arcade", href: "#coder-arcade" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -146,6 +147,16 @@ export default function Navbar() {
               <VolumeX className="w-4 h-4 text-slate-500" />
             )}
           </button>
+
+          {/* Quick Play Game Button */}
+          <a
+            href="#coder-arcade"
+            className="flex items-center gap-1.5 px-3 py-2 text-xs font-mono font-bold tracking-wider uppercase rounded-xl bg-cyan/10 hover:bg-cyan/20 text-cyan border border-cyan/40 transition-all duration-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.4)] group"
+            data-cursor-text="Game"
+          >
+            <Gamepad2 className="w-3.5 h-3.5 text-cyan animate-pulse" />
+            <span className="hidden xl:inline">Play Game</span>
+          </a>
 
           <a
             href={siteConfig.resumeUrl}

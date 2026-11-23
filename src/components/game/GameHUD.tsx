@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { sfx } from "@/utils/audio";
-import { Volume2, VolumeX, Sliders, Eye, Film } from "lucide-react";
+import { Volume2, VolumeX, Sliders, Eye, Film, Gamepad2 } from "lucide-react";
 import { useCinematic } from "@/components/providers/CinematicProvider";
 import { QualityTier } from "@/config/cinematic";
 
@@ -54,7 +54,8 @@ export default function GameHUD() {
       { id: "projects", label: "SCENE 04 // THE BLUEPRINTS" },
       { id: "experience", label: "SCENE 05 // THE CHRONICLES" },
       { id: "certifications", label: "SCENE 06 // THE CREDENTIALS" },
-      { id: "contact", label: "SCENE 07 // THE TRANSMISSION" },
+      { id: "coder-arcade", label: "SCENE 07 // CODER ARCADE" },
+      { id: "contact", label: "SCENE 08 // THE TRANSMISSION" },
     ];
 
     const observer = new IntersectionObserver(
@@ -86,7 +87,10 @@ export default function GameHUD() {
         "4": "projects",
         "5": "experience",
         "6": "certifications",
-        "7": "contact",
+        "7": "coder-arcade",
+        "8": "contact",
+        "g": "coder-arcade",
+        "G": "coder-arcade",
       };
 
       if (shortcuts[e.key]) {
@@ -194,6 +198,22 @@ export default function GameHUD() {
             </div>
           )}
         </div>
+
+        {/* Quick Play Coder Arcade Button */}
+        <button
+          onClick={() => {
+            const arcade = document.getElementById("coder-arcade");
+            if (arcade) {
+              sfx.playWhoosh();
+              arcade.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+          className="px-2.5 py-1 rounded-md bg-cyan/15 hover:bg-cyan/25 border border-cyan/40 text-[10px] font-mono text-cyan font-bold flex items-center gap-1.5 transition-all shadow-[0_0_10px_rgba(34,211,238,0.2)]"
+          title="Play Coder Arcade Mini-Game [Press G]"
+        >
+          <Gamepad2 className="w-3 h-3 text-cyan animate-pulse" />
+          <span>ARCADE [G]</span>
+        </button>
 
         {/* Replay Intro Button */}
         <button

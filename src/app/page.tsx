@@ -4,6 +4,7 @@ import SkillsConstellation from "@/components/skills/SkillsConstellation";
 import ProjectsSection from "@/components/projects/ProjectsSection";
 import ExperienceTimeline from "@/components/experience/ExperienceTimeline";
 import CertificationsSection from "@/components/certifications/CertificationsSection";
+import CoderGameSection from "@/components/game/CoderGameSection";
 import ContactSection from "@/components/contact/ContactSection";
 import CinematicIntro from "@/components/cinematic/CinematicIntro";
 import CinematicOutro from "@/components/cinematic/CinematicOutro";
@@ -24,7 +25,9 @@ export default function HomePage() {
       <ExperienceTimeline />
       <SceneDivider label="SCENE 05 // 06" />
       <CertificationsSection />
-      <SceneDivider label="SCENE 06 // 07" />
+      <SceneDivider label="SCENE 06 // ARCADE" />
+      <CoderGameSection />
+      <SceneDivider label="SCENE 07 // TRANSMISSION" />
       <ContactSection />
       <SceneDivider label="FINALE" />
       <CinematicOutro />
