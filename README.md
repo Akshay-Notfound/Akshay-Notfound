@@ -5,6 +5,13 @@
     <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,6,12,18,24&height=220&section=header&text=AKSHAY%20SHIVAJI%20RATHOD&fontSize=48&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=AI%20%26%20Machine%20Learning%20Engineer%20%E2%80%A2%20Full-Stack%20Architect&descAlignY=60&descAlign=50" width="100%" alt="Akshay Shivaji Rathod Header Banner" />
   </a>
 
+  <!-- ANIMATED HOLOGRAPHIC AVATAR -->
+  <a href="https://akshay-notfound.vercel.app">
+    <img src="https://raw.githubusercontent.com/Akshay-Notfound/Akshay-Notfound/main/assets/akshay-hologram.gif" width="230" alt="Akshay Shivaji Rathod - Hologram AI Avatar" />
+  </a>
+
+  <br/>
+
   <!-- ANIMATED TYPING SVG -->
   <a href="https://akshay-notfound.vercel.app">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=22D3EE&center=true&vCenter=true&multiline=false&width=620&height=50&lines=%F0%9F%91%8B+Hi%2C+I'm+Akshay+Shivaji+Rathod;%F0%9F%A4%96+AI+%26+Machine+Learning+Engineer;%E2%9A%A1+Generative+AI+%26+Autonomous+RAG+Agents;%F0%9F%8C%90+Full-Stack+Architect+%7C+Next.js+%2B+Python;%F0%9F%9A%80+Transforming+Raw+Data+into+Intelligent+Solutions" alt="Typing SVG" />
@@ -31,9 +38,9 @@
 
 </div>
 
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
 
-### 👨‍💻 About Me
+### 👨‍💻 System Dossier & About Me
 
 ```bash
 ┌── ⚡ SYSTEM_DOSSIER // AKSHAY_RATHOD ────────────────────────────────────────────────┐
@@ -50,9 +57,9 @@
 - 📊 **Big Data & Analytics:** Transforming unstructured data into interactive business intelligence dashboards and automated ML workflows.
 - 🎨 **Creative Engineering:** Designing cinematic, interactive 3D web experiences using **Three.js** and **React Three Fiber**.
 
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
 
-### 🛠️ Tech Stack & Capabilities
+### 🛠️ Interactive Tech Stack & Capabilities
 
 <div align="center">
 
@@ -86,9 +93,9 @@
 
 </div>
 
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
 
-### 🚀 Featured Engineering Projects
+### 🚀 Flagship Engineering Projects
 
 <table align="center" width="100%">
   <tr>
@@ -165,7 +172,34 @@
   </tr>
 </table>
 
----
+<div align="center">
+  <table border="0">
+    <tr>
+      <td>
+        <a href="https://github.com/Akshay-Notfound/datamind-analytics">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=Akshay-Notfound&repo=datamind-analytics&theme=radical&hide_border=true&bg_color=0d1117&title_color=22d3ee&icon_color=0ea5e9" alt="DataMind AI Pin" />
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/Akshay-Notfound/Real-time-Fake-News-Detection">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=Akshay-Notfound&repo=Real-time-Fake-News-Detection&theme=radical&hide_border=true&bg_color=0d1117&title_color=22d3ee&icon_color=0ea5e9" alt="Fake News Detection Pin" />
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
+
+### 📈 Contribution Velocity & Interactive Activity Graph
+
+<div align="center">
+  <a href="https://github.com/Akshay-Notfound">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=Akshay-Notfound&theme=react-dark&hide_border=true&area=true" width="100%" alt="Contribution Activity Graph" />
+  </a>
+</div>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
 
 ### 🐍 Contribution Activity & Snake Animation
 
@@ -177,7 +211,7 @@
   </picture>
 </div>
 
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
 
 ### 📊 GitHub Analytics & Streak Metrics
 
@@ -205,7 +239,7 @@
   </table>
 </div>
 
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" height="9" />
 
 ### 🎯 Interactive Dossier & Deep Dive
 
